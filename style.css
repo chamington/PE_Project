@@ -3,7 +3,7 @@ body {
     margin:0px;
     background-color: #654;
 }
-@media (min-width:730px) {
+@media (min-width:1000px) {
     #headlist {
         list-style-type: none;
         margin: 0;
@@ -45,7 +45,7 @@ body {
 
 
 
-@media (max-width:730px) {
+@media (max-width:1000px) {
     #headlist {
         list-style-type: none;
         margin: 0;
