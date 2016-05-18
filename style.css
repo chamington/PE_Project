@@ -43,6 +43,9 @@ body {
     #name {
     font-size: 100px;
 }
+    #headlist{
+        padding-left: calc(50vw - 360px);
+    }
 }
 
 
@@ -148,7 +151,6 @@ h1 {
 }
 
 a {
-    font-family:sans-serif;
     font-weight: 100;
 }
 
@@ -178,13 +180,8 @@ a {
     text-align:center;
 }
 h1 {
-    font-family: sans-serif;
     font-weight: 100;
 }
-*{
-    font-family: thins !important;
-}
-
 /*
 What category is the drug? Example – stimulant, depressant, narcotics, hallucinogens, inhalants, cannabis, painkillers and anti-depressant.
 Three street names
