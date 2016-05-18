@@ -1,0 +1,186 @@
+@charset "UTF-8";
+body {
+    margin:0px;
+    background-color: #654;
+}
+@media (min-width:730px) {
+    #headlist {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #654;
+    }
+
+    .headli {
+        float: left;
+        width: calc((1440px / 12));
+    }
+
+    .headli a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .headli {
+        border-right-width:1px;
+        border-right-color: #abc;
+        border-right-style: none;
+    }
+    #content{
+        width:730px;
+        margin-left: calc((100vw - 730px) / 2);
+    }
+    #cover{
+        margin-top: 450px;
+    }
+    .whichDrug{
+    width: calc((100% / 5) - 5px);
+    }
+}
+
+
+
+
+@media (max-width:730px) {
+    #headlist {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #654;
+        text-align: center
+    }
+
+    .headli a {
+        display: block;
+        color: #333;
+        padding: 8px 0 8px 16px;
+        text-decoration: none;
+        color: white;
+        border-bottom-color: #543;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
+
+    /* Change the link color on hover */
+    
+
+    #content{
+    margin-right:10px;
+    margin-left:10px;
+    }
+    #cover{
+        margin-top: 290px;
+    }
+    .whichDrug{
+        width: calc(100vw - 20px);
+        margin-top: -2px;
+    }
+}
+
+.headli a:hover {
+    background-color: #765;
+}
+
+#cover{
+    z-index:100;
+    width:100vw;
+    height:auto;
+    background-color: white;
+    border-top-width: 4px;
+    border-top-style:groove;
+    border-top-color: #aaa;
+}
+
+.headli {
+    border-bottom-width:1px;
+    border-bottom-color: #aaa;
+    border-bottom-style: none;
+}
+
+
+#header{
+    background-color: #000;
+}
+img{
+    width:100vw;
+    height:500px;
+}
+.container {
+    width: 100vw;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position:fixed;
+    z-index: -1;
+    top:0;
+}
+h1 {
+    margin-top:46px;
+    font-family: sans-serif;
+}
+.footer{
+    font-size:10px;
+    text-align: center;
+}
+#footer {
+    margin-top:100px;
+    margin-bottom:20px;
+}
+
+a {
+    font-family:sans-serif;
+}
+
+.active{
+    background-color: #765;
+    pointer-events: none;
+    cursor: default;
+    
+}
+
+.whichDrug{
+    color:#fefefe;
+    background-color: #999;
+    border: 0;
+    padding: 0;
+    height: 50px;
+    font-size:20px;
+    border-radius: 10px;
+    border-width:2px;
+    border-style:solid;
+    border-color:#333;
+}
+.whichDrug:focus {
+    outline:none;
+}
+#question {
+    text-align:center;
+}
+/*
+What category is the drug? Example – stimulant, depressant, narcotics, hallucinogens, inhalants, cannabis, painkillers and anti-depressant.
+Three street names
+Three short-term effects
+Three long-term effects
+Three interesting facts or stats about the drug
+Give an example of how it can effect a teenager socially, mentally/emotionally and physically?
+
+
+Include a picture of each
+Use proper grammar
+Cite all sources
+
+You will be graded on the following:
+
+Do you include all the underlined requirements about each drug? 
+Is the informational document visually appealing and presented well?
+Is the information age appropriate for Freshman aged students?
+Is the content well researched and cited?
+Overall quality of the informational document
+
+*/
