@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drugs | Quiz</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="jquery.js"></script>
+        <script>
+            
+            
+/*jslint browser: true*/
+/*global $, jQuery, alert*/
+/*jshint strict: true */
+
+            
+  function resetAns(){
+        QMethA="This drug is popular in the south";
+        QMethB="This drug had an anti [this] campagn called Not Even Once";
+        QMethC="This drug is known to increase the heart rate and energy";
+        QHeroinA="Kurt Cobain took this drug until he died";
+        QHeroinB="This drug was originally used as a treatment for morphine addiction";
+        QHeroinC="There is a cheaper, but much more deadly version of this drug in russia called Krokodil";
+        QCocaineA="This drug is most popularly snorted";
+        QCocaineB="This drug can be both smoked and snorted, but it is more known to be snorted";
+        QCocaineC="This drug increases dopamine levels in the brain after snorting";
+        QEcstasyA="This drug is very popular in raves";
+        QEcstasyB="This drug makes the user very happy";
+        QEcstasyC="This drug is a colorful pill with psychedelic styles";
+        QMorphineA="This drug is popular in hospitals";
+        QMorphineB="This drug is the most popular medical painkiller";
+        QMorphineC="This drug was onced used as a cough syrup, but was replaced by heroin";
+        drugType=Math.floor((Math.random() * 5) + 1);
+        nth=Math.floor((Math.random() * 3) + 1);
+        if (drugType==1){
+            //This means meth
+            if (nth==1){$("#question").html(QMethA);}
+            if (nth==2){$("#question").html(QMethB);}
+            if (nth==3){$("#question").html(QMethC);}
+        }
+        if (drugType==2){
+            //This means heroin
+            if (nth==1){$("#question").html(QHeroinA);}
+            if (nth==2){$("#question").html(QHeroinB);}
+            if (nth==3){$("#question").html(QHeroinC);}
+        }
+        if (drugType==3){
+            //This means cocain
+            if (nth==1){$("#question").html(QCocaineA);}
+            if (nth==2){$("#question").html(QCocaineB);}
+            if (nth==3){$("#question").html(QCocaineC);}
+        }
+        if (drugType==4){
+            //This means ecstasy
+            if (nth==1){$("#question").html(QEcstasyA);}
+            if (nth==2){$("#question").html(QEcstasyB);}
+            if (nth==3){$("#question").html(QEcstasyC);}
+        }
+        if (drugType==5){
+            //This means morphine
+            if (nth==1){$("#question").html(QMorphineA);}
+            if (nth==2){$("#question").html(QMorphineB);}
+            if (nth==3){$("#question").html(QMorphineC);}
+        }
+}
+$( document ).ready(function() {
+    var trans = {"Meth":1,"Heroin":2,"Cocaine":3,"Ecstasy":4,"Morphine":5}
+    total=0;
+    correct=0;
+    $(".whichDrug").mouseup(function () {$(this).css("background-color", "#999");});
+    $(".whichDrug").mouseleave(function () {$(this).css("background-color", "#999");});
+    $(".whichDrug").mousedown(function () {$(this).css("background-color", "#888");});
+    resetAns()
+    $(".whichDrug").mouseup(function () {
+        total++;
+        picked=(this.innerHTML);
+        pickednum=trans[picked];
+        if (pickednum==drugType){correct++}
+        $("#amountCorrect").html(correct+"/"+total);
+        $("#percent").html((Math.floor((correct/total)*10000))/100+"%");
+        resetAns()
+    });
+});
+            
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <ul id="headlist">
+                <li class="headli">
+                    <a href="coke.html">Cocaine</a>
+                </li>
+                <li class="headli">
+                    <a href="heroin.html">Heroin</a>
+                </li>
+                <li class="headli">
+                    <a href="meth.html">Meth</a>
+                </li>
+                <li class="headli">
+                    <a href="morphine.html">Morphine</a>
+                </li>
+                <li class="headli">
+                    <a href="ecstasy.html">Ecstasy</a>
+                </li>
+                <li class="headli" id="annoyingWhiteBarRemoval">
+                    <a href="game_quiz.html" class="active">Game/Quiz</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container" style="background-image: url('test.jpg');" alt="Test; source at http://www.carmanainsworthhappenings.com/wp-content/uploads/2013/05/shutterstock_57915325.jpg"></div>
+        <div id="cover">
+        <div id="content">
+            <h1 id="question">
+                What kind of drug is this?
+            </h1>
+            <button id="morphineButton" class="whichDrug">Morphine</button>
+            <button id="cocaineButton" class="whichDrug">Cocaine</button>
+            <button id="methButton" class="whichDrug">Meth</button>
+            <button id="ecstacyButton" class="whichDrug">Ecstasy</button>
+            <button id="heroinButton" class="whichDrug">Heroin</button>
+            <h2 id="amountCorrect"></h2>
+            <h2 id="percent"></h2>
+        </div>
+        <div id="footer">
+        <p class="footer">So this is just a project for health class, and I thought a footer would look good</p>
+        <p class="footer">Copyrighted</p>
+        <p class="footer">all rights reserved</p>
+            </div>
+        </div>
+    </body>
