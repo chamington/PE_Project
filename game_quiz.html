@@ -63,6 +63,7 @@
 }
 $( document ).ready(function() {
     var trans = {"Meth":1,"Heroin":2,"Cocaine":3,"Ecstasy":4,"Morphine":5}
+    var transx = {1:"Meth",2:"Heroin",3:"Cocaine",4:"Ecstasy",5:"Morphine"}
     total=0;
     correct=0;
     $(".whichDrug").mouseup(function () {$(this).css("background-color", "#999");});
@@ -73,7 +74,8 @@ $( document ).ready(function() {
         total++;
         picked=(this.innerHTML);
         pickednum=trans[picked];
-        if (pickednum==drugType){correct++}
+        if (pickednum==drugType){correct++;$("#correct?").html("Correct!");}
+        else {$("#correct?").html("No, the answer was "+transx[drugType]);}
         $("#amountCorrect").html(correct+"/"+total);
         $("#percent").html((Math.floor((correct/total)*10000))/100+"%");
         resetAns()
@@ -116,6 +118,7 @@ $( document ).ready(function() {
             <button id="methButton" class="whichDrug">Meth</button>
             <button id="ecstacyButton" class="whichDrug">Ecstasy</button>
             <button id="heroinButton" class="whichDrug">Heroin</button>
+            <h2 id="Correct?"></h2>
             <h2 id="amountCorrect"></h2>
             <h2 id="percent"></h2>
         </div>
