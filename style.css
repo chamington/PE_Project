@@ -1,11 +1,4 @@
 @charset "UTF-8";
-body {
-    margin:0px;
-    background-color:#999;
-}
-
-
-
 
 
 @media screen and (max-width:7in) {
@@ -182,6 +175,10 @@ a {
 }
 h1 {
     font-weight: 100;
+}
+body {
+    margin:0px;
+    background-color:#999;
 }
 /*
 What category is the drug? Example – stimulant, depressant, narcotics, hallucinogens, inhalants, cannabis, painkillers and anti-depressant.
