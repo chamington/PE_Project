@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-@media screen and (max-width:7in) {
+@media screen and (max-width:769px) {
     #headlist {
         list-style-type: none;
         margin: 0;
@@ -40,7 +40,7 @@
     font-size: 20vw;
     }
 }
-@media (min-width: 7in) {
+@media screen and (min-width: 769px) {
     #headlist {
         list-style-type: none;
         margin: 0;
@@ -68,8 +68,8 @@
         border-right-style: none;
     }
     #content{
-        width:7in;
-        margin-left: calc((100vw - 7in) / 2);
+        width:769px;
+        margin-left: calc((100vw - 769px) / 2);
     }
     #cover{
         margin-top: 450px;
